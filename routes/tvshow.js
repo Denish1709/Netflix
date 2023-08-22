@@ -17,8 +17,8 @@ router.get("/", async (req, res) => {
       filter.premiere_year = { $gt: premiere_year }; // { premiere_year: { $gt: release_year } }
     }
   }
-  const list = await tvshow.find(filter);
-  res.send(list);
+  const movieslist = await tvshow.find(filter);
+  res.send(movieslist);
 });
 
 router.get("/:id", async (req, res) => {
